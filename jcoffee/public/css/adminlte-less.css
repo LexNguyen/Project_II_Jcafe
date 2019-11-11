@@ -271,6 +271,7 @@ a:focus {
 .main-header .navbar .nav > li.user > a > .ion {
   margin-right: 5px;
 }
+
 .main-header .navbar .nav > li > a > .label {
   position: absolute;
   top: 9px;
@@ -294,6 +295,7 @@ a:focus {
   padding: 0 15px;
   font-weight: 300;
   overflow: hidden;
+  background-color: #551606;
 }
 .main-header .logo .logo-lg {
   display: block;
@@ -647,6 +649,7 @@ a:focus {
     -webkit-transform: translateZ(0);
   }
   .sidebar-mini.sidebar-collapse .main-header .logo {
+    
     width: 50px;
   }
   .sidebar-mini.sidebar-collapse .main-header .logo > .logo-mini {

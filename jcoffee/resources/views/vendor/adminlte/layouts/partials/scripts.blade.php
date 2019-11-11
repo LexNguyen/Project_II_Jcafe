@@ -13,5 +13,3 @@
         'csrfToken' => csrf_token(),
     ]) !!};
 </script>
-
-@yield('js')

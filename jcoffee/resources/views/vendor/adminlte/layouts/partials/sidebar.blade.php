@@ -33,15 +33,22 @@
         <ul class="sidebar-menu">
             <li class="header">{{ trans('adminlte_lang::message.header') }}</li>
             <!-- Optionally, you can add icons to the links -->
-            <li><a href="{{ route('showAll') }}"><i class='fa fa-link'></i> <span>Quản Lý Sinh Viên</span></a></li>
-            <li><a href="{{ route('class_show_all') }}"><i class='fa fa-link'></i> <span>Quản Lý Lớp Học</span></a></li>
-            {{-- <li class="treeview">
-                <a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.multilevel') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+            <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-th-large'></i> <span>{{ trans('adminlte_lang::message.product') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#">{{ trans('adminlte_lang::message.linklevel2') }}</a></li>
-                    <li><a href="#">{{ trans('adminlte_lang::message.linklevel2') }}</a></li>
+                    <li><a href="#"><i class='fa fa-plus-square-o'></i><span>{{ trans('adminlte_lang::message.addproduct') }}</span></a></li>
+                    <li><a href="#"><i class='fa fa-list'></i><span>{{ trans('adminlte_lang::message.productlist') }}</span></a></li>
                 </ul>
-            </li> --}}
+            </li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-reorder'></i> <span>{{ trans('adminlte_lang::message.order') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class='fa fa-plus-square-o'></i><span>{{ trans('adminlte_lang::message.addorder') }}</span></a></li>
+                    <li><a href="#"><i class='fa fa-list'></i><span>{{ trans('adminlte_lang::message.orderlist') }}</span></a></li>
+                </ul>
+            </li>
+
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
