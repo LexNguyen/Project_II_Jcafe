@@ -46,11 +46,14 @@ class Order_detailController extends Controller
 		->leftJoin('products','products.id','=','order_detail.id_p')
 		->select('id_o','id_p','table_number','customer_request','products.name','number','order_detail.price_detail')
 		->get();
-
+		// $productIdList = products::lists('name','id');
+		// $orderIdList = order::lists('id','id');
 		$index = 1;
 		return view('order_detail.showProduct')->with([
 			'productList' => $productList,
 			'index' => $index
+			// 'productIdList'=>$productIdList,
+			// 'orderIdList'=>$orderIdList
 		]);
 	}
 
