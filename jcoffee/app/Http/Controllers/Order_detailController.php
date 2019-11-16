@@ -35,6 +35,7 @@ class Order_detailController extends Controller
 	public function addOrder_detail(Request $request){
 		// var_dump($request->all());
 		$id = $request->id;
+
 		$id_p = $request->id_p;
 		$id_o = $request->id_o;
 
@@ -64,8 +65,6 @@ class Order_detailController extends Controller
 		
 		return redirect()->route('show');
 	}
-
-	// public function
 
 	public function show(Request $request){
 		// $productList = DB::table('order_detail')->get();
