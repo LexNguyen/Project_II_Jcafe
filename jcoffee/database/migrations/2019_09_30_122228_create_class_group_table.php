@@ -19,6 +19,7 @@ class CreateClassGroupTable extends Migration {
 				$table->foreign('student_id')->references('id')->on('students');
 			});
 	}
+			
 
 	/**
 	 * Reverse the migrations.

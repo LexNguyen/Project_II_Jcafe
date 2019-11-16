@@ -7,9 +7,9 @@ Route::group(['prefix' => '/order'],function() {
 
     Route::get('/showOrder','OrderController@showOrder')->name('showOrder');
 
-    Route::get('/edit','OrderController@editOrder')->name('edit');
+    Route::get('/edit','OrderController@editOrder')->name('editOrder');
     
-    Route::post('/editOrder','OrderController@edit')->name('post');
+    Route::post('/editOrder','OrderController@editOrdr')->name('postEditOrder');
 
     Route::post('/delete','OrderController@deleteOrder')->name('deleteOrder');
 	

@@ -12,7 +12,7 @@
 	<div class="container-fluid spark-screen" style="background-color: white; padding-top: 15px">
 		<div class="row">
 			<div class="col-md-12">
-				<form method="get" action="{{ route('showOrder') }}">
+				<form method="post" action="{{ route('postEditOrder') }}">
 					{{ csrf_field() }}
 					<div class="form-group">
 						<!-- <label>Id</label> -->

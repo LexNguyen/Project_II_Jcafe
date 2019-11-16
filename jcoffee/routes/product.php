@@ -7,9 +7,9 @@ Route::group(['prefix' => '/products'],function() {
 
 	Route::get('/showP','ProductController@showP')->name('showP');
 
-    Route::get('/edit','ProductController@editProduct')->name('edit');
+    Route::get('/edit','ProductController@editProduct')->name('editProducts');
     
-    Route::post('/editP','ProductController@edit')->name('post');
+    Route::post('/editP','ProductController@addProduct')->name('postEditProducts');
 
     Route::post('/delete','ProductController@deleteProduct')->name('deleteProduct');
 	

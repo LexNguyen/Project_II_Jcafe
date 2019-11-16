@@ -16,7 +16,6 @@
 				<table class="table table-bordered">
 					<tr>
 						<th>No</th>
-						<th>Id</th>
                         <th>Order date</th>
 						<th>Total Price</th>
                         <th width="80px"></th>
@@ -25,10 +24,9 @@
 					@foreach ($orderList as $item)
 						<tr>
 							<td>{{ $index++ }}</td>
-							<td>{{ $item->id }}</td>
                             <td>{{ $item->order_date }}</td>
 							<td>{{ $item->total_price }}</td>
-                            <td><a href="{{ route('edit') }}?id={{ $item->id }}">
+                            <td><a href="{{ route('editOrder') }}?id={{ $item->id }}">
                             <button class="btn btn-warning">Edit</button></a></td>
                             <td>
                             <button class="btn btn-danger" onclick="deleteOrder({{ $item->id }})">Delete</button>

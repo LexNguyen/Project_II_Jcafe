@@ -127,4 +127,6 @@ return [
     'password'                => 'Password',
     'retrypepassword'         => 'Retype password',
     'fullname'                => 'Full Name',
+    'product'                 => 'Product',
+    'order'                   => 'Order',
 ];

@@ -15,10 +15,6 @@
 				<form method="post" action="{{ route('postOrder') }}">
 					{{ csrf_field() }}
 					<div class="form-group">
-						<label>Id</label>
-						<input type="text" name="id" class="form-control" placeholder="Enter Id order">
-					</div>
-					<div class="form-group">
 						<label>Order date</label>
 						<input type="text" name="order_date" class="form-control" placeholder="Enter order date(y-m-d)">
 					</div>

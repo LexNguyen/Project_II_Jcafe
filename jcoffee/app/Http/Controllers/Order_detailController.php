@@ -35,7 +35,7 @@ class Order_detailController extends Controller
 			'price_detail' =>$price_detail,
 			'customer_request'=>$customer_request
 		]);
-		return redirect()->route('showProduct');
+		return redirect()->route('show');
 	}
 
 	public function show(Request $request){

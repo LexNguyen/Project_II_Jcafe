@@ -31,56 +31,30 @@ class ProductController extends Controller
 			'product' => $product
 		]);
     }
-    //edit post
-    public function edit(Request $request){
 
-        $id = $request->id;
-		$name = $request->name;
-		$sale = $request->sale;
-        $price = $request->price;
-        // $post->save();
-
-        DB::table('products')
-			->where('id',$id)
-			->update([
-				'name' => $name,
-				'sale' => $sale,
-				'price' => $price
-            ]);
-        //return redirect()->route('showP');
-        return view ('product.showP');
-    }
- 
 	public function addProduct(Request $request){
 		$id = $request->id;
 		$name = $request->name;
 		$sale = $request->sale;
         $price = $request->price;
-        
-		DB::table('products')->insert([
-			'id' => $id,
+		
+		$data =[
 			'name' => $name,
 			'sale' => $sale,
 			'price' => $price
-		]);
+		];
+		if (isset($id) && $id > 0) {
+			DB::table('products')
+			->where('id',$id)
+			->update($data);
+		} else {
+			DB::table('products')->insert($data);
+		}
 	
 		return redirect()->route('showP');
 	}
 
 	public function showP(Request $request){
-        $id = $request->id;
-		$name = $request->name;
-		$sale = $request->sale;
-        $price = $request->price;
-        // $post->save();
-
-        DB::table('products')
-			->where('id',$id)
-			->update([
-				'name' => $name,
-				'sale' => $sale,
-				'price' => $price
-            ]);
 		$productList = DB::table('products')->get();
 		$index = 1;
 		return view('product.showP')->with([
@@ -90,10 +64,7 @@ class ProductController extends Controller
 	}
 
 	public function deleteProduct(Request $request){
-		DB::table('products')
-		->where('id',$request->id)
+		products::where('id',$request->id)
 		->delete();
-
 	}
-
 }

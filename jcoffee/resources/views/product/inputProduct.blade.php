@@ -15,16 +15,12 @@
 				<form method="post" action="{{ route('postProduct') }}">
 					{{ csrf_field() }}
 					<div class="form-group">
-						<label>Id</label>
-						<input type="text" name="id" class="form-control" placeholder="Enter Id product">
-					</div>
-					<div class="form-group">
 						<label>Name</label>
 						<input type="text" name="name" class="form-control" placeholder="Enter name">
 					</div>
 					<div class="form-group">
 						<label>Sale</label>
-						<input type="text" name="sale" class="form-control" placeholder="Enter sale">
+						<input type="text" name="sale" class="form-control" placeholder="Enter sale( % )">
 					</div>
 					<div class="form-group">
 						<label>Price</label>
