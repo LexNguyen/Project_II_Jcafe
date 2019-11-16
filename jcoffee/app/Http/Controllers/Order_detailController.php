@@ -58,7 +58,9 @@ class Order_detailController extends Controller
 		];
 
 		if (isset($id) && $id > 0) {
-			DB::table('order_detail')->update($data);
+			DB::table('order_detail')
+			->where('id',$id)
+			->update($data);
 		}else{
 			DB::table('order_detail')->insert($data);
 		}
