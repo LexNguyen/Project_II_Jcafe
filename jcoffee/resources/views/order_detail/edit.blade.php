@@ -14,6 +14,11 @@
 			<div class="col-md-12">
 				<form method="post" action="{{ route('postO') }}">
 					{{ csrf_field() }}
+                    <div class="form-group">
+						<!-- <label>Id</label> -->
+						<input type="text" name="id" class="form-control" 
+                        value="{{ ($order_detail != null)?$order_detail->id:'' }}" >
+					</div>
 					<div class="form-group">
 						<label>Id_Order</label>
 						<input type="text" name="id_o" class="form-control" placeholder="Enter Id_order"
@@ -31,7 +36,7 @@
 					</div>
                     <div class="form-group">
 						<label>Table Number</label>
-						<input type="text" name="number" class="form-control" placeholder="Enter table number"
+						<input type="text" name="table_number" class="form-control" placeholder="Enter table number"
                         value="{{ ($order_detail != null)?$order_detail->table_number:'' }}">
 					</div>
 					<div class="form-group">

@@ -21,7 +21,7 @@
 						<th>Price</th>
 						<th>Customer_request</th>
 					</tr>
-                    @foreach ($productList as $item)
+                    @foreach ($order_detail as $item)
 						<tr>
 							<td>{{ $index++ }}</td>
 							<td>{{ $item->table_number }}</td>

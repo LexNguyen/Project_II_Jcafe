@@ -9,7 +9,6 @@ Route::group(['prefix' => '/order_detail'],function() {
 
 	Route::get('/editForm', 'Order_detailController@editForm')->name('editO');
 
-	Route::post('/postOrder', 'Order_detailController@addOrder_detail')->name('postO');
 
 	Route::post('/deleteOrder','Order_detailController@deleteOrder_detail')->name('deleteOrder_detail');
 	

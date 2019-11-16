@@ -65,6 +65,8 @@ class Order_detailController extends Controller
 		return redirect()->route('show');
 	}
 
+	// public function
+
 	public function show(Request $request){
 		// $productList = DB::table('order_detail')->get();
 
@@ -76,7 +78,7 @@ class Order_detailController extends Controller
 
 		$index = 1;
 		return view('order_detail.showOrder')->with([
-			'order_detail' => $productList,
+			'order_detail' => $order_detail,
 			'index' => $index
 		]);
 	}
