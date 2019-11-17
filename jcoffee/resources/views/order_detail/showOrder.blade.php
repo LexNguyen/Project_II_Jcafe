@@ -20,6 +20,8 @@
                         <th>Name product</th>
 						<th>Price</th>
 						<th>Customer_request</th>
+						<th></th>
+						<th></th>
 					</tr>
                     @foreach ($order_detail as $item)
 						<tr>
