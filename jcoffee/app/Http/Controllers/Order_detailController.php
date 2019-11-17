@@ -16,6 +16,7 @@ class Order_detailController extends Controller
 		$products = DB::table('products')
 		->select('id','name')
 		->get();
+		
 					
 		return view('order_detail.productInput')->with([
 			'orders'=>$orders,
