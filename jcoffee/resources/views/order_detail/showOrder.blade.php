@@ -21,6 +21,8 @@
 						<th>Price</th>
 						<th>Customer_request</th>
 						<th>Total_price</th>
+						<th></th>
+						<th></th>
 					</tr>
                     @foreach ($order_detail as $item)
 						<tr>

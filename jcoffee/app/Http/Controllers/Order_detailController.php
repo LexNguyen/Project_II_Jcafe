@@ -10,7 +10,17 @@ class Order_detailController extends Controller
 {
     //
     public function form(Request $request){
-		return view('order_detail.productInput');
+		$orders = DB::table('order')
+				  ->select('id')
+				  ->get();
+		$products = DB::table('products')
+		->select('id','name')
+		->get();
+					
+		return view('order_detail.productInput')->with([
+			'orders'=>$orders,
+			'products'=>$products
+		]);
 	}
 
 	public function editForm(Request $request){
@@ -36,10 +46,11 @@ class Order_detailController extends Controller
 		// var_dump($request->all());
 		$id = $request->id;
 		//khi nhap ten san pham vao neu co se lay ma id_p tu table product
-		$name    = $request->name;
-		$id_p = DB::table('products')
-			->where('name', $name)
-			->value('id');
+		// $name    = $request->name;
+		// $id_p = DB::table('products')
+		// 	->where('name', $name)
+		// 	->value('id');
+		$id_p=$request->id_p;
 
 		// $id_p = $request->id_p;
 

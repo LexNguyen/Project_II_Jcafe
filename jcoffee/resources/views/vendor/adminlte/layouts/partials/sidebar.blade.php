@@ -37,17 +37,26 @@
             <li class="treeview">
                 <a href="#"><i class='fa fa-th-large'></i> <span>{{ trans('adminlte_lang::message.product') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class='fa fa-plus-square-o'></i><span>{{ trans('adminlte_lang::message.addproduct') }}</span></a></li>
-                    <li><a href="#"><i class='fa fa-list'></i><span>{{ trans('adminlte_lang::message.productlist') }}</span></a></li>
+                    <li><a href="{{ url('products/inputP') }}"><i class='fa fa-plus-square-o'></i><span>{{ trans('adminlte_lang::message.addproduct') }}</span></a></li>
+                    <li><a href="{{ url('products/showP') }}"><i class='fa fa-list'></i><span>{{ trans('adminlte_lang::message.productlist') }}</span></a></li>
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-reorder'></i> <span>{{ trans('adminlte_lang::message.order') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class='fa fa-plus-square-o'></i><span>{{ trans('adminlte_lang::message.addorder') }}</span></a></li>
-                    <li><a href="#"><i class='fa fa-list'></i><span>{{ trans('adminlte_lang::message.orderlist') }}</span></a></li>
+                    <li><a href="{{ url('order/inputOrder') }}"><i class='fa fa-plus-square-o'></i><span>{{ trans('adminlte_lang::message.addorder') }}</span></a></li>
+                    <li><a href="{{ url('order/showOrder') }}"><i class='fa fa-list'></i><span>{{ trans('adminlte_lang::message.orderlist') }}</span></a></li>
                 </ul>
             </li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-reorder'></i> <span>{{ trans('adminlte_lang::message.orderDetail') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('order_detail/postProduct') }}"><i class='fa fa-plus-square-o'></i><span>{{ trans('adminlte_lang::message.addOrderDetail') }}</span></a></li>
+                    <li><a href="{{ url('order_detail/showOrder') }}"><i class='fa fa-list'></i><span>{{ trans('adminlte_lang::message.orderDetailList') }}</span></a></li>
+                </ul>
+            </li>
+
+
 
         </ul><!-- /.sidebar-menu -->
     </section>

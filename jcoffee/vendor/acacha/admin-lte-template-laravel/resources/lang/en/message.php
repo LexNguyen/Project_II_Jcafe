@@ -129,4 +129,11 @@ return [
     'fullname'                => 'Full Name',
     'product'                 => 'Product',
     'order'                   => 'Order',
+    'orderDetail'             => 'Order detail',
+    'addproduct'              => 'Add Product',
+    'productlist'             => 'Product List',
+    'addorder'                => 'Add Order',
+    'orderlist'               => 'Order List',
+    'addOrderDetail'          => 'Add Order detail',
+    'orderDetailList'         => 'List Order detail'      
 ];
