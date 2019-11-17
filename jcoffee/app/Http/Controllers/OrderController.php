@@ -33,10 +33,11 @@ class OrderController extends Controller
     }
     //edit post
     public function addOrder(Request $request){
-
-		$id = $request->id;
 		$order_date = $request->order_date;
-		$total_price = DB::table('order_detail')->where('id_o',$id)->value('price_detail');
+
+		$id_o = DB::table('order_detail')->value('id_o');
+		$total_price = DB::table('order_detail')->where('id_o',$id_o)
+		->value('price_detail');
 
 		$data =[
 			'order_date' => $order_date,

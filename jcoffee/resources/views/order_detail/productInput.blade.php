@@ -18,9 +18,13 @@
 						<label>Id_Order</label>
 						<input type="text" name="id_o" class="form-control" placeholder="Enter Id_order">
 					</div>
-					<div class="form-group">
+					<!-- <div class="form-group">
 						<label>Id_Product</label>
 						<input type="text" name="id_p" class="form-control" placeholder="Enter Id_product">
+					</div> -->
+					<div class="form-group">
+						<label>Name Product</label>
+						<input type="text" name="name" class="form-control" placeholder="Enter name product">
 					</div>
 					<div class="form-group">
 						<label>Number</label>

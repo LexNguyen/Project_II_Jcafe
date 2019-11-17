@@ -31,7 +31,9 @@
                             <td><a href="{{ route('editProducts') }}?id={{ $item->id }}">
                             <button class="btn btn-warning">Edit</button></a></td>
                             <td>
-                            <button class="btn btn-danger" onclick="deleteProduct({{ $item->id }})">Delete</button>
+							<a href="{{ route('deleteProduct') }}?id={{ $item->id }}">
+                            <button class="btn btn-danger">delete</button></a>
+							<!-- <button class="btn btn-danger" onclick="deleteProduct({{ $item->id }})">Delete</button> -->
                             </td>
 						</tr>
 						
@@ -41,10 +43,11 @@
 		</div>
 	</div>
 @stop
+
 @section('js')
 <script type="text/javascript">
     function deleteProduct(id) {
-        $.post('{{ route('deleteProduct') }}', {
+        $.get('{{ route('deleteProduct') }}', {
             "_token": "{{ csrf_token() }}",
             id: id
         }, function(data, status) {

@@ -32,7 +32,9 @@
 							<td><a href="{{ route('editO') }}?id={{ $item->id }}">
                             <button class="btn btn-warning">Edit</button></a></td>
                             <td>
-                            <button class="btn btn-danger" onclick="deleteOrder_detail({{ $item->id }})">Delete</button>
+							<a href="{{ route('deleteOrder_detail') }}?id={{ $item->id }}">
+                            <button class="btn btn-danger">Delete</button></a>
+                            <!-- <button class="btn btn-danger" onclick="deleteOrder_detail({{ $item->id }})">Delete</button> -->
                             </td>
 						</tr>
 						

@@ -35,8 +35,14 @@ class Order_detailController extends Controller
 	public function addOrder_detail(Request $request){
 		// var_dump($request->all());
 		$id = $request->id;
+		//khi nhap ten san pham vao neu co se lay ma id_p tu table product
+		$name    = $request->name;
+		$id_p = DB::table('products')
+			->where('name', $name)
+			->value('id');
 
-		$id_p = $request->id_p;
+		// $id_p = $request->id_p;
+
 		$id_o = $request->id_o;
 
 		$price = DB::table('products')->where('id',$id_p)->value('price');
@@ -76,6 +82,7 @@ class Order_detailController extends Controller
 		->leftJoin('products','products.id','=','order_detail.id_p')
 		->select('order_detail.id','id_o','id_p','table_number','customer_request','products.name','number','order_detail.price_detail')
 		->get();
+
 		// $productIdList = products::lists('name','id');
 		// $orderIdList = order::lists('id','id');
 		$index = 1;
@@ -90,6 +97,7 @@ class Order_detailController extends Controller
 	public function deleteOrder_detail(Request $request){
 		DB::table('order_detail')->where('id',$request->id)
 		->delete();
+		return redirect()->route('show');
 	}
 
 }

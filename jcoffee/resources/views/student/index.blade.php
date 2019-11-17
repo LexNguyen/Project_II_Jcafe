@@ -27,7 +27,8 @@
                     <a href="{{ route('viewAdd') }}?id={{ $item->id }}"><button class="btn btn-warning">Edit</button></a>
                 </td>
                 <td>
-                    <button class="btn btn-danger" onclick="deleteStudent({{ $item->id }})">Delete</button>
+                    <button class="btn btn-danger" onclick="deleteStudent({{ $item->id }})">
+                    Delete</button>
                 </td>
             </tr>
         @endforeach
