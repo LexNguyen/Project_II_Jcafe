@@ -20,6 +20,7 @@
                         <th>Name product</th>
 						<th>Price</th>
 						<th>Customer_request</th>
+						<th>Total_price</th>
 					</tr>
                     @foreach ($order_detail as $item)
 						<tr>
@@ -28,6 +29,7 @@
                             <td>{{ $item->number }}</td>
 							<td>{{ $item->name }}</td>
 							<td>{{ $item->price_detail }}</td>
+							<td>{{ $item->customer_request }}</td>
 							<td>{{ $item->customer_request }}</td>
 							<td><a href="{{ route('editO') }}?id={{ $item->id }}">
                             <button class="btn btn-warning">Edit</button></a></td>
