@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+        'as' => 'home-pages',
+        'uses' => 'FrontendController@showHome'
+    ]);
 
 Route::group(['middleware' => 'auth'], function () {
     //    Route::get('/link1', function ()    {
