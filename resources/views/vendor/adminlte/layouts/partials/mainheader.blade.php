@@ -2,7 +2,7 @@
 <header class="main-header">
 
     <!-- Logo -->
-    <a href="{{ url('/home') }}" class="logo" style="background-color: #441f01">
+    <a href="{{ url('/') }}" class="logo" style="background-color: #151111">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>J</b>C</span>
         <!-- logo for regular state and mobile devices -->
@@ -10,7 +10,7 @@
     </a>
 
     <!-- Header Navbar -->
-    <nav class="navbar navbar-static-top" role="navigation" style="background-color: #7e4a04">
+    <nav class="navbar navbar-static-top" role="navigation" style="background-color: #c49b63">
         <!-- Sidebar toggle button-->
         <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
             <span class="sr-only">{{ trans('adminlte_lang::message.togglenav') }}</span>
