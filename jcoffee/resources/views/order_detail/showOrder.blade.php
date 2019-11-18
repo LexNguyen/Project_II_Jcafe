@@ -20,7 +20,6 @@
                         <th>Name product</th>
 						<th>Price</th>
 						<th>Customer_request</th>
-						<th>Total_price</th>
 						<th></th>
 						<th></th>
 					</tr>
@@ -32,7 +31,6 @@
 							<td>{{ $item->name }}</td>
 							<td>{{ $item->price_detail }}</td>
 							<td>{{ $item->customer_request }}</td>
-							<td>{{ $item->customer_request }}</td>
 							<td><a href="{{ route('editO') }}?id={{ $item->id }}">
                             <button class="btn btn-warning">Edit</button></a></td>
                             <td>
@@ -41,22 +39,10 @@
                             <!-- <button class="btn btn-danger" onclick="deleteOrder_detail({{ $item->id }})">Delete</button> -->
                             </td>
 						</tr>
-						
 					@endforeach
 				</table>
+				{{ $order_detail->links()}}
 			</div>
 		</div>
 	</div>
-@stop
-@section('js')
-<script type="text/javascript">
-    function deleteOrder_detail(id) {
-        $.post('{{ route('deleteOrder_detail') }}', {
-            "_token": "{{ csrf_token() }}",
-            id: id
-        }, function(data, status) {
-            location.reload()
-        })
-    }
-</script>
 @stop

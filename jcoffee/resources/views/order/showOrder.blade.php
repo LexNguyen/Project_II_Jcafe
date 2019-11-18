@@ -32,22 +32,10 @@
                             <button class="btn btn-danger" onclick="deleteOrder({{ $item->id }})">Delete</button>
                             </td>
 						</tr>
-						
 					@endforeach
 				</table>
+				{{ $orderList->links() }}
 			</div>
 		</div>
 	</div>
-@stop
-@section('js')
-<script type="text/javascript">
-    function deleteOrder(id) {
-        $.post('{{ route('deleteOrder') }}', {
-            "_token": "{{ csrf_token() }}",
-            id: id
-        }, function(data, status) {
-            location.reload()
-        })
-    }
-</script>
 @stop

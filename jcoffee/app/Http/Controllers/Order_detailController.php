@@ -16,7 +16,6 @@ class Order_detailController extends Controller
 		$products = DB::table('products')
 		->select('id','name')
 		->get();
-		
 					
 		return view('order_detail.productInput')->with([
 			'orders'=>$orders,
@@ -26,6 +25,13 @@ class Order_detailController extends Controller
 
 	public function editForm(Request $request){
 		$order_detail = null;
+
+		$orders = DB::table('order')
+				  ->select('id')
+				  ->get();
+		$products = DB::table('products')
+		->select('id','name')
+		->get();
 		
 		if(isset($request->id)&& $request->id>0){
 			$id = $request->id;
@@ -39,7 +45,9 @@ class Order_detailController extends Controller
 			}
 		}
 		return view('order_detail.edit')->with([
-			'order_detail' => $order_detail
+			'order_detail' => $order_detail,
+			'orders' => $orders,
+			'products' => $products
 		]);
 	}
 
@@ -107,16 +115,15 @@ class Order_detailController extends Controller
 		->leftJoin('order','order.id','=','order_detail.id_o')
 		->leftJoin('products','products.id','=','order_detail.id_p')
 		->select('order_detail.id','id_o','id_p','table_number','customer_request','products.name','number','order_detail.price_detail')
-		->get();
+		->paginate(4);
 
-		// $productIdList = products::lists('name','id');
-		// $orderIdList = order::lists('id','id');
 		$index = 1;
+		if (isset($request->page)) {
+			$index = ($request->page-1)*4+1;
+		}
 		return view('order_detail.showOrder')->with([
 			'order_detail' => $order_detail,
 			'index' => $index
-			// 'productIdList'=>$productIdList,
-			// 'orderIdList'=>$orderIdList
 		]);
 	}
 

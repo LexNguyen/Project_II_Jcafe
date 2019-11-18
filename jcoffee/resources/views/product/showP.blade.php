@@ -39,20 +39,8 @@
 						
 					@endforeach
 				</table>
+				{{ $productList->links() }}
 			</div>
 		</div>
 	</div>
-@stop
-
-@section('js')
-<script type="text/javascript">
-    function deleteProduct(id) {
-        $.get('{{ route('deleteProduct') }}', {
-            "_token": "{{ csrf_token() }}",
-            id: id
-        }, function(data, status) {
-            location.reload()
-        })
-    }
-</script>
 @stop

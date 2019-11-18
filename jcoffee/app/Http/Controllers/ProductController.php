@@ -55,8 +55,11 @@ class ProductController extends Controller
 	}
 
 	public function showP(Request $request){
-		$productList = DB::table('products')->get();
+		$productList = DB::table('products')->paginate(4);
 		$index = 1;
+		if (isset($request->page)) {
+			$index = ($request->page-1)*4+1;
+		}
 		return view('product.showP')->with([
 			'productList' => $productList,
 			'index' => $index
