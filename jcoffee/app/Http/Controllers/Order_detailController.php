@@ -82,7 +82,21 @@ class Order_detailController extends Controller
 		}else{
 			DB::table('order_detail')->insert($data);
 		}
-		
+		$total_price=DB::table('order_detail')
+						->select('id_o',DB::raw('sum(price_detail) as total'))
+						->where('id_o',$id_o)
+						->groupBy('id_o')
+						->first();
+		$order_edit=[
+			'id'=>$id_o,
+			'order_date'=>DB::table('order')
+						  ->where('id',$id_o)
+						  ->value('order_date'),
+			'total_price'=>$total_price->total
+		];
+		DB::table('order')
+			->where('id',$id_o)
+			->update($order_edit);	
 		return redirect()->route('show');
 	}
 
