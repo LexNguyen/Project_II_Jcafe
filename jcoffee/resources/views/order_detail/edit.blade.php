@@ -15,14 +15,23 @@
 				<form method="post" action="{{ route('postOrder_detail') }}">
 					{{ csrf_field() }}
                     <div class="form-group">
-						<!-- <label>Id</label> -->
-						<input type="text" name="id" class="form-control" 
-                        value="{{ ($order_detail != null)?$order_detail->id:'' }}" >
+						<label>Id_Order</label>
+						<!-- <input type="text" name="id_o" class="form-control" placeholder="Enter Id_order"> -->
+						<select class="form-control" name="id_o">
+							@foreach ($orders as $item)
+								<option value="{{$item->id}}">{{$item->id}}</option>	
+							@endforeach
+                        </select>
+						
 					</div>
 					<div class="form-group">
-						<label>Id_Order</label>
-						<input type="text" name="id_o" class="form-control" placeholder="Enter Id_order"
-                        value="{{ ($order_detail != null)?$order_detail->id_o:'' }}">
+						<label>Name Product</label>
+						<!-- <input type="text" name="name" class="form-control" placeholder="Enter name product"> -->
+						<select class="form-control" name="id_p">
+							@foreach ($products as $item)
+								<option value="{{$item->id}}">{{$item->name}}</option>	
+							@endforeach
+                        </select>
 					</div>
 					<div class="form-group">
 						<label>Id_Product</label>

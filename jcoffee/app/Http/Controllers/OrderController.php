@@ -37,7 +37,7 @@ class OrderController extends Controller
 
 		$id_o = DB::table('order_detail')->value('id_o');
 		$total_price = DB::table('order_detail')->where('id_o',$id_o)
-		->value('price_detail');
+		->sum('price_detail')->get();
 
 		$data =[
 			'order_date' => $order_date,
@@ -65,8 +65,12 @@ class OrderController extends Controller
 	}
 
 	public function showOrder(Request $request){
-		$orderList = DB::table('order')->get();
+		$orderList = DB::table('order')->paginate(4);
+
 		$index = 1;
+		if (isset($request->page)) {
+			$index = ($request->page-1)*4+1;
+		}
 		return view('order.showOrder')->with([
 			'orderList' => $orderList,
 			'index' => $index
