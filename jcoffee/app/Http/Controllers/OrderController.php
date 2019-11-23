@@ -33,33 +33,28 @@ class OrderController extends Controller
     }
     //edit post
     public function addOrder(Request $request){
-		$order_date = $request->order_date;
 
 		$id_o = DB::table('order_detail')->value('id_o');
-		$total_price = DB::table('order_detail')->where('id_o',$id_o)
-		->sum('price_detail')->get();
+		$order_date = $request ->order_date;
+		$total_price=DB::table('order_detail')
+						->select('id_o',DB::raw('sum(price_detail) as total'))
+						->where('id_o',$id_o)
+						->groupBy('id_o')
+						->first();
 
 		$data =[
-			'order_date' => $order_date,
-			'total_price' => $total_price
+			'order_date'=>DB::table('order')
+						  ->where('id',$id_o)
+						  ->value('order_date'),
+			'total_price'=>$total_price->total
 		];
-			DB::table('order')->insert($data);
-	
-		return redirect()->route('showOrder');
-	}
-	
-	public function editOrdr(Request $request){
-		$id = $request->id;
-		$order_date = $request->order_date;
-		$total_price = DB::table('order_detail')->where('id_o',$id)->value('price_detail');
-
-		$data =[
-			'order_date' => $order_date,
-			'total_price' => $total_price
-		];
-			DB::table('order')
-			->where('id',$id)
-			->update($data);
+			if (isset($id) && $id > 0) {
+				DB::table('order')
+				->where('id',$id_o)
+				->update($data);	
+			}else{
+				DB::table('order')->insert($data);
+			}
 	
 		return redirect()->route('showOrder');
 	}
@@ -79,9 +74,9 @@ class OrderController extends Controller
 
 	public function deleteOrder(Request $request){
 		DB::table('order')
-		->where('id',$request->id)
+		->where('id', $request->id)
 		->delete();
-
+		return redirect()->route('showOrder');
 	}
 
 }

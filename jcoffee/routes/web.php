@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/description', function () {
+    return view('desc');
+});
+
 // Route::get('/postProduct', function () {
 //     return view('productInput');
 // });

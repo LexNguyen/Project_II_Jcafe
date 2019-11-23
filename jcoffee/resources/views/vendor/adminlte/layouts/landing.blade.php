@@ -45,7 +45,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><b>adminlte-laravel</b></a>
+                <a class="navbar-brand" href="#"><b>JCOFFEE</b></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -68,14 +68,12 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 
 
     <section id="home" name="home"></section>
-    <div id="headerwrap">
+    <div id="headerwrap" style="background-image: url({{ asset('/img/item-03.png') }}); ">
         <div class="container">
             <div class="row centered">
                 <div class="col-lg-12">
-                    <h1>Acacha <b><a href="https://github.com/acacha/adminlte-laravel">adminlte-laravel</a></b></h1>
-                    <h3>A <a href="https://laravel.com/">Laravel</a> {{ trans('adminlte_lang::message.laravelpackage') }}
-                        scaffolding/boilerplate {{ trans('adminlte_lang::message.to') }} <a href="https://almsaeedstudio.com/preview">AdminLTE</a> {{ trans('adminlte_lang::message.templatewith') }}
-                        <a href="http://getbootstrap.com/">Bootstrap</a> 3.0 {{ trans('adminlte_lang::message.and') }} <a href="http://blacktie.co/demo/pratt/">Pratt</a> Landing page</h3>
+                    <h1>WellCome <b><a href="https://github.com/acacha/adminlte-laravel">JCoffee</a></b></h1>
+                    
                     <h3><a href="{{ url('/register') }}" class="btn btn-lg btn-success">{{ trans('adminlte_lang::message.gedstarted') }}</a></h3>
                 </div>
                 <div class="col-lg-2">
@@ -84,7 +82,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                     <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/img/arrow1.png') }}">
                 </div>
                 <div class="col-lg-8">
-                    <img class="img-responsive" src="{{ asset('/img/app-bg.png') }}" alt="">
+                    <img class="img-responsive" src="{{ asset('/img/item-04.png') }}" alt="">
                 </div>
                 <div class="col-lg-2">
                     <br>
@@ -134,7 +132,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 <br>
                 <br>
                 <div class="col-lg-6 centered">
-                    <img class="centered" src="{{ asset('/img/mobile.png') }}" alt="">
+                    <img class="centered" src="{{ asset('/img/mobile1.png') }}" alt="">
                 </div>
 
                 <div class="col-lg-6">
@@ -204,8 +202,8 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     </div><!--/ #features -->
 
 
-    <section id="showcase" name="showcase"></section>
-    <div id="showcase">
+    <section id="showcase" name="showcase"style="background-color: #4e2626"></section>
+    <div id="showcase" style="background-color: #4e2626">
         <div class="container">
             <div class="row">
                 <h1 class="centered">{{ trans('adminlte_lang::message.screenshots') }}</h1>
@@ -216,15 +214,19 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                         <ol class="carousel-indicators">
                             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                         </ol>
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img src="{{ asset('/img/item-01.png') }}" alt="">
+                                <img src="{{ asset('/img/item-05.png') }}" alt="">
                             </div>
                             <div class="item">
-                                <img src="{{ asset('/img/item-02.png') }}" alt="">
+                                <img src="{{ asset('/img/item-06.png') }}" alt="">
+                            </div>
+                             <div class="item">
+                                <img src="{{ asset('/img/item-07.png') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -238,45 +240,12 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 
 
     <section id="contact" name="contact"></section>
-    <div id="footerwrap">
-        <div class="container">
-            <div class="col-lg-5">
-                <h3>{{ trans('adminlte_lang::message.address') }}</h3>
-                <p>
-                    Av. Greenville 987,<br/>
-                    New York,<br/>
-                    90873<br/>
-                    United States
-                </p>
-            </div>
-
-            <div class="col-lg-7">
-                <h3>{{ trans('adminlte_lang::message.dropus') }}</h3>
-                <br>
-                <form role="form" action="#" method="post" enctype="plain">
-                    <div class="form-group">
-                        <label for="name1">{{ trans('adminlte_lang::message.yourname') }}</label>
-                        <input type="name" name="Name" class="form-control" id="name1" placeholder="{{ trans('adminlte_lang::message.yourname') }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="email1">{{ trans('adminlte_lang::message.emailaddress') }}</label>
-                        <input type="email" name="Mail" class="form-control" id="email1" placeholder="{{ trans('adminlte_lang::message.enteremail') }}">
-                    </div>
-                    <div class="form-group">
-                        <label>{{ trans('adminlte_lang::message.yourtext') }}</label>
-                        <textarea class="form-control" name="Message" rows="3"></textarea>
-                    </div>
-                    <br>
-                    <button type="submit" class="btn btn-large btn-success">{{ trans('adminlte_lang::message.submit') }}</button>
-                </form>
-            </div>
-        </div>
-    </div>
+    
     <div id="c">
         <div class="container">
             <p>
-                <a href="https://github.com/acacha/adminlte-laravel"></a><b>admin-lte-laravel</b></a>. {{ trans('adminlte_lang::message.descriptionpackage') }}.<br/>
-                <strong>Copyright &copy; 2015 <a href="http://acacha.org">Acacha.org</a>.</strong> {{ trans('adminlte_lang::message.createdby') }} <a href="http://acacha.org/sergitur">Sergi Tur Badenas</a>. {{ trans('adminlte_lang::message.seecode') }} <a href="https://github.com/acacha/adminlte-laravel">Github</a>
+                <a href="https://github.com/acacha/adminlte-laravel"></a><b>JCoffee</b></a>. {{ trans('adminlte_lang::message.descriptionpackage') }}.<br/>
+                <strong>Copyright &copy; 2015 <a href="http://acacha.org">Jcoffee.org</a>.</strong> {{ trans('adminlte_lang::message.createdby') }} <a href="http://acacha.org/sergitur">Sergi Tur Badenas</a>. {{ trans('adminlte_lang::message.seecode') }} <a href="https://github.com/acacha/adminlte-laravel">Github</a>
                 <br/>
                 AdminLTE {{ trans('adminlte_lang::message.createdby') }} Abdullah Almsaeed <a href="https://almsaeedstudio.com/">almsaeedstudio.com</a>
                 <br/>

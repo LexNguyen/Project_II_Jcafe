@@ -37,3 +37,19 @@ Route::group(['prefix' => '/admin/class'], function () {
 Route::group(['prefix' => '/admin/group'], function () {
 		Route::get('/list', 'AdminGroupController@showAll')->name('group_show_all');
 	});
+
+Route::group(['prefix' => '/user'],function() {
+
+	Route::get('/inputUser','AdminClassController@inputOrder')->name('inputO');
+
+	Route::post('/post','AdminClassController@addOrder')->name('postUser');
+
+    Route::get('/showUser','AdminClassController@showOrder')->name('showOrder');
+
+    Route::get('/edit','AdminClassController@editOrder')->name('editUser');
+    
+    // Route::post('/editOrder','OrderController@editOrdr')->name('postEditOrder');
+
+    Route::get('/delete','AdminClassController@deleteOrder')->name('deleteUser');
+	
+});

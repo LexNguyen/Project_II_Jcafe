@@ -1,11 +1,11 @@
 @extends('adminlte::layouts.app')
 
 @section('htmlheader_title')
-	Nhap San Pham
+	Order Detail
 @stop
 
 @section('contentheader_title')
-	Nhap San Pham
+	Order Detail
 @stop
 
 @section('main-content')

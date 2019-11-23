@@ -1,11 +1,11 @@
 @extends('adminlte::layouts.app')
 
 @section('htmlheader_title')
-	Sua San Pham
+	Edit Product
 @stop
 
 @section('contentheader_title')
-	Sua San Pham
+	Edit product
 @stop
 
 @section('main-content')
