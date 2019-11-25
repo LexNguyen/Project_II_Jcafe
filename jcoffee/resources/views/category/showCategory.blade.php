@@ -1,11 +1,11 @@
 @extends('adminlte::layouts.app')
 
 @section('htmlheader_title')
-	Quan Ly San Pham
+	Categor(Product)
 @stop
 
 @section('contentheader_title')
-	Danh Sách San Pham
+    Categor(Product)
 @stop
 
 @section('main-content')
@@ -17,31 +17,24 @@
 					<tr>
 						<th>No</th>
                         <th>Name</th>
-						<th>Age</th>
-						<th>Address</th>
-                        <th>Phone</th>
                         <th width="80px"></th>
                         <th width="80px"></th>
 					</tr>
-					@foreach ($userList as $item)
+					@foreach ($categoryList as $item)
 						<tr>
 							<td>{{ $index++ }}</td>
                             <td>{{ $item->name }}</td>
-							<td>{{ $item->age }}</td>
-							<td>{{ $item->address }}</td>
-                            <th>{{ $item->phone}}</th>
-                            <td><a href="{{ route('editUser') }}?id={{ $item->id }}">
+                            <td><a href="{{ route('editCategory') }}?id={{ $item->id }}">
                             <button class="btn btn-warning">Edit</button></a></td>
                             <td>
-							<a href="{{ route('deleteUser') }}?id={{ $item->id }}">
-                            <button class="btn btn-danger">delete</button></a>
-							<!-- <button class="btn btn-danger" onclick="deleteProduct({{ $item->id }})">Delete</button> -->
+							<a href="{{ route('deleteCategory') }}?id={{ $item->id }}">
+                            <button class="btn btn-danger">Delete</button></a>
+                            <!-- <button class="btn btn-danger" onclick="deleteOrder({{ $item->id }})">Delete</button> -->
                             </td>
 						</tr>
-						
 					@endforeach
 				</table>
-				{{ $productList->links() }}
+				{{ $categoryList->links() }}
 			</div>
 		</div>
 	</div>
