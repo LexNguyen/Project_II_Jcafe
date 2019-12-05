@@ -18,15 +18,12 @@
 						<th>No</th>
                         <th>Name</th>
                         <th width="80px"></th>
-                        <th width="80px"></th>
 					</tr>
 					@foreach ($categoryList as $item)
 						<tr>
 							<td>{{ $index++ }}</td>
                             <td>{{ $item->name }}</td>
-                            <td><a href="{{ route('editCategory') }}?id={{ $item->id }}">
-                            <button class="btn btn-warning">Edit</button></a></td>
-                            <td>
+							<td>
 							<a href="{{ route('deleteCategory') }}?id={{ $item->id }}">
                             <button class="btn btn-danger">Delete</button></a>
                             <!-- <button class="btn btn-danger" onclick="deleteOrder({{ $item->id }})">Delete</button> -->

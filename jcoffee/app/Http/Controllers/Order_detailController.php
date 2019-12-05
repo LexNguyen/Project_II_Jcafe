@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 
 class Order_detailController extends Controller
 {
-    //
+    
     public function form(Request $request){
 		$orders = DB::table('order')
 				  ->select('id')
@@ -52,17 +52,8 @@ class Order_detailController extends Controller
 	}
 
 	public function addOrder_detail(Request $request){
-		// var_dump($request->all());
 		$id = $request->id;
-		//khi nhap ten san pham vao neu co se lay ma id_p tu table product
-		// $name    = $request->name;
-		// $id_p = DB::table('products')
-		// 	->where('name', $name)
-		// 	->value('id');
 		$id_p=$request->id_p;
-
-		// $id_p = $request->id_p;
-
 		$id_o = $request->id_o;
 
 		$price = DB::table('products')->where('id',$id_p)->value('price');
@@ -90,21 +81,6 @@ class Order_detailController extends Controller
 		}else{
 			DB::table('order_detail')->insert($data);
 		}
-		$total_price=DB::table('order_detail')
-						->select('id_o',DB::raw('sum(price_detail) as total'))
-						->where('id_o',$id_o)
-						->groupBy('id_o')
-						->first();
-		$order_edit=[
-			'id'=>$id_o,
-			'order_date'=>DB::table('order')
-						  ->where('id',$id_o)
-						  ->value('order_date'),
-			'total_price'=>$total_price->total
-		];
-		DB::table('order')
-			->where('id',$id_o)
-			->update($order_edit);	
 		return redirect()->route('show');
 	}
 

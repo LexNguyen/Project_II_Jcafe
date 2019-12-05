@@ -17,13 +17,11 @@ class CategoryController extends Controller
 
 		$name = $request ->name;
 
-			if (isset($id) && $id > 0) {
-				DB::table('category')
-				->where('id',$id)
-				->update($name);	
-			}else{
-				DB::table('category')->insert($name);
-			}
+		$data=[
+			'name' => $name
+		];
+
+		DB::table('category')->insert($data);
 	
 		return redirect()->route('showCategory');
 	}
@@ -38,26 +36,6 @@ class CategoryController extends Controller
 		return view('category.showCategory')->with([
 			'categoryList' => $categoryList,
 			'index' => $index
-		]);
-    }
-    
-    //edit get
-	public function editCategory(Request $request){
-        $category = null;
-		
-		if(isset($request->id)&& $request->id>0){
-			$id = $request->id;
-
-			$categoryList = DB::table('category')
-			->where('id',$request->id)
-			->get();
-
-			if($categoryList != null && count($categoryList)>0){
-				$category = $categoryList[0];
-			}
-		}
-		return view('category.edit')->with([
-			'category' => $category
 		]);
     }
 

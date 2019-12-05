@@ -15,6 +15,16 @@
 				<form method="post" action="{{ route('postEditProducts') }}">
 					{{ csrf_field() }}
 					<div class="form-group">
+						<label>Name Category</label>
+						<!-- <input type="text" name="id_o" class="form-control" placeholder="Enter Id_order"> -->
+						<select class="form-control" name="id_cg">
+							@foreach ($category as $item)
+								<option value="{{$item->id}}">{{$item->name}}</option>	
+							@endforeach
+                        </select>
+						
+					</div>
+					<div class="form-group">
 						<!-- <label>Id</label> -->
 						<input type="text" name="id" class="form-control" 
                         value="{{ ($product != null)?$product->id:'' }}" style="display: none;">

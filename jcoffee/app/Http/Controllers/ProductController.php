@@ -10,11 +10,16 @@ class ProductController extends Controller
 {
     //
     public function inputP(Request $request){
-		return view('product.inputProduct');
+		$category = DB::table('category')->select('id','name')->get();
+		return view('product.inputProduct')->with([
+			'category' => $category
+		]);
 	}
 //edit get
 	public function editProduct(Request $request){
-        $product = null;
+		$product = null;
+		
+		$category = DB::table('category')->select('id','name')->get();
 		
 		if(isset($request->id)&& $request->id>0){
 			$id = $request->id;
@@ -28,17 +33,20 @@ class ProductController extends Controller
 			}
 		}
 		return view('product.edit')->with([
-			'product' => $product
+			'product' => $product,
+			'category' => $category
 		]);
     }
 
 	public function addProduct(Request $request){
 		$id = $request->id;
+		$id_cg = $request->id_cg;
 		$name = $request->name;
 		$sale = $request->sale;
         $price = $request->price;
 		
 		$data =[
+			'id_cg' => $id_cg,
 			'name' => $name,
 			'sale' => $sale,
 			'price' => $price

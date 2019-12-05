@@ -16,7 +16,6 @@ Order Detail
 					{{ csrf_field() }}
 					<div class="form-group">
 						<label>Id_Order</label>
-						<!-- <input type="text" name="id_o" class="form-control" placeholder="Enter Id_order"> -->
 						<select class="form-control" name="id_o">
 							@foreach ($orders as $item)
 								<option value="{{$item->id}}">{{$item->id}}</option>	
@@ -24,16 +23,11 @@ Order Detail
                         </select>
 						
 					</div>
-					<!-- <div class="form-group">
-						<label>Id_Product</label>
-						<input type="text" name="id_p" class="form-control" placeholder="Enter Id_product">
-					</div> -->
 					<div class="form-group">
-						<label>Name Product</label>
-						<!-- <input type="text" name="name" class="form-control" placeholder="Enter name product"> -->
+						<label>Id_Product</label>
 						<select class="form-control" name="id_p">
 							@foreach ($products as $item)
-								<option value="{{$item->id}}">{{$item->name}}</option>	
+								<option value="{{$item->id}}">{{$item->id}}</option>	
 							@endforeach
                         </select>
 					</div>
@@ -45,10 +39,7 @@ Order Detail
 						<label>Table_number</label>
 						<input type="text" name="table_number" class="form-control" placeholder="Enter table_number">
 					</div>
-					<!-- <div class="form-group">
-						<label>Price_detail</label>
-						<input type="text" name="price_detail" class="form-control" placeholder="Enter price_detail">
-					</div> -->
+
 					<div class="form-group">
 						<label>Customer_request</label>
 						<input type="text" name="customer_request" class="form-control" placeholder="Enter customer_request">
