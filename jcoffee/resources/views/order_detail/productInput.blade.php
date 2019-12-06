@@ -33,16 +33,16 @@ Order Detail
 					</div>
 					<div class="form-group">
 						<label>Number</label>
-						<input type="text" name="number" class="form-control" placeholder="Enter number">
+						<input type="text" name="number" class="form-control" placeholder="Enter number" required>
 					</div>
 					<div class="form-group">
 						<label>Table_number</label>
-						<input type="text" name="table_number" class="form-control" placeholder="Enter table_number">
+						<input type="text" name="table_number" class="form-control" placeholder="Enter table_number" required>
 					</div>
 
 					<div class="form-group">
 						<label>Customer_request</label>
-						<input type="text" name="customer_request" class="form-control" placeholder="Enter customer_request">
+						<input type="text" name="customer_request" class="form-control" placeholder="Enter customer_request" required>
 					</div>
 					<button class="btn btn-success">Submit</button>
 				</form>

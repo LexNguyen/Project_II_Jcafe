@@ -21,7 +21,7 @@ class CreateOrderDetailTable extends Migration
             $table->foreign('id_p')->references('id')->on('products');
             $table->integer('number');
             $table->integer('table_number');
-            $table->integer('price_detail')->nullable();
+            $table->float('price_detail')->nullable();
             $table->string('customer_request');
             $table->timestamps();
         });

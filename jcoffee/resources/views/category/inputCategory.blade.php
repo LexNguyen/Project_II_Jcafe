@@ -16,7 +16,7 @@
 					{{ csrf_field() }}
 					<div class="form-group">
 						<label>Name</label>
-						<input type="text" name="name" class="form-control" placeholder="Enter name">
+						<input type="text" name="name" class="form-control" placeholder="Enter name" value="" required>
 					</div>
 					<button class="btn btn-success">Add</button>
 				</form>

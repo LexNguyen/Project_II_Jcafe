@@ -26,7 +26,7 @@
 					</div>
 					<div class="form-group">
 						<label>Order date</label>
-						<input type="text" name="order_date" class="form-control" placeholder="Enter order date(y-m-d)">
+						<input type="text" name="order_date" class="form-control" placeholder="Enter order date(y-m-d)" required>
 					</div>
 					<button class="btn btn-success">Add</button>
 				</form>

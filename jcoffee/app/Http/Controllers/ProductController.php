@@ -43,13 +43,14 @@ class ProductController extends Controller
 		$id_cg = $request->id_cg;
 		$name = $request->name;
 		$sale = $request->sale;
-        $price = $request->price;
+		$price = $request->price;
+		$price_format = number_format($price);
 		
 		$data =[
 			'id_cg' => $id_cg,
 			'name' => $name,
 			'sale' => $sale,
-			'price' => $price
+			'price' => $price_format
 		];
 		if (isset($id) && $id > 0) {
 			DB::table('products')

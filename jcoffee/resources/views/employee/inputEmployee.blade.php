@@ -23,19 +23,19 @@ Management's Employee
                     </div>
                     <div class="form-group">
 						<label>Name</label>
-						<input type="text" name="name" class="form-control" placeholder="Enter name">
+						<input type="text" name="name" class="form-control" placeholder="Enter name" required>
 					</div>
 					<div class="form-group">
 						<label>Address</label>
-						<input type="text" name="address" class="form-control" placeholder="Enter address">
+						<input type="text" name="address" class="form-control" placeholder="Enter address" required>
 					</div>
 					<div class="form-group">
 						<label>Phone</label>
-						<input type="text" name="phone" class="form-control" placeholder="Enter phone">
+						<input type="text" name="phone" class="form-control" placeholder="Enter phone" required>
 					</div>
 					<div class="form-group">
 						<label>Age</label>
-						<input type="text" name="age" class="form-control" placeholder="Enter age">
+						<input type="text" name="age" class="form-control" placeholder="Enter age" required>
 					</div>
 					<button class="btn btn-success">Add</button>
 				</form>

@@ -62,7 +62,7 @@ class Order_detailController extends Controller
 
 		$number = $request->number;
 		$table_number = $request->table_number;
-		$price_detail = ($price-$price*$sale/100)*$number;
+		$price_detail = number_format(($price-$price*$sale/100)*$number);
 		$customer_request = $request->customer_request;
 
 		$data = [

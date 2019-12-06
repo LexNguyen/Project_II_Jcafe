@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->integer('sale');
-            $table->integer('price');
+            $table->float('price');
             $table->unsignedBigInteger('id_cg');
             $table->foreign('id_cg')->references('id')->on('category');
             $table->timestamps();

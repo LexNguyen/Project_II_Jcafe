@@ -26,15 +26,15 @@ Quản Lý Sản Phẩm
 					</div>
 					<div class="form-group">
 						<label>Name</label>
-						<input type="text" name="name" class="form-control" placeholder="Enter name">
+						<input type="text" name="name" class="form-control" placeholder="Enter name" required>
 					</div>
 					<div class="form-group">
 						<label>Sale</label>
-						<input type="text" name="sale" class="form-control" placeholder="Enter sale( % )">
+						<input type="text" name="sale" class="form-control" placeholder="Enter sale( % )" required>
 					</div>
 					<div class="form-group">
 						<label>Price</label>
-						<input type="text" name="price" class="form-control" placeholder="Enter price">
+						<input type="text" name="price" class="form-control" placeholder="Enter price" required>
 					</div>
 					<button class="btn btn-success">Add</button>
 				</form>
