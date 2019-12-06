@@ -26,8 +26,7 @@ class OrderController extends Controller
 						->where('id_o',$id_o)
 						->groupBy('id_o')
 						->first();
-						//
-		$total_format = number_format($total_price);
+		$total_format=number_format($total_price);
 
 		$data =[
 			'id_e' => $id_e,
@@ -57,7 +56,6 @@ class OrderController extends Controller
 		DB::table('order')
 		->where('id', $request->id)
 		->delete();
-		return redirect()->route('showOrder');
 	}
 
 }

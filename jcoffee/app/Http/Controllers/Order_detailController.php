@@ -106,7 +106,6 @@ class Order_detailController extends Controller
 	public function deleteOrder_detail(Request $request){
 		DB::table('order_detail')->where('id',$request->id)
 		->delete();
-		return redirect()->route('show');
 	}
 
 }

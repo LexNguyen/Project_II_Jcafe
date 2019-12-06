@@ -130,10 +130,20 @@ return [
     'product'                 => 'Product',
     'order'                   => 'Order',
     'orderDetail'             => 'Order detail',
+    'category'                => 'Category',
+    'employee'                => 'Employee',
+    'material'                => 'Material',
     'addproduct'              => 'Add Product',
     'productlist'             => 'Product List',
     'addorder'                => 'Add Order',
     'orderlist'               => 'Order List',
     'addOrderDetail'          => 'Add Order detail',
-    'orderDetailList'         => 'List Order detail'      
+    'orderDetailList'         => 'List Order detail',
+    'addcategory'             => 'Add Category',
+    'categorylist'            => 'Category List',
+    'employeelist'            => 'Employee List',
+    'addemployee'            =>  'Add Employee',
+    'materiallist'            => 'Material List',
+    'addmaterial'            =>  'Add Material',
+
 ];

@@ -25,8 +25,7 @@
 							<td>{{ $index++ }}</td>
                             <td>{{ $item->order_date }}</td>
 							<td>{{ $item->total_price }}</td>
-							<a href="{{ route('deleteOrder') }}?id={{ $item->id }}">
-                            <button class="btn btn-danger">Delete</button></a>
+							<button class="btn btn-danger" onclick="deleteOrder({{ $item->id }})">Delete</button>
                             </td>
 						</tr>
 					@endforeach
@@ -35,4 +34,17 @@
 			</div>
 		</div>
 	</div>
+@stop
+
+@section('js')
+<script type="text/javascript">
+    function deleteOrder(id) {
+        $.post('{{ route('deleteOrder') }}', {
+            "_token": "{{ csrf_token() }}",
+            id: id
+        }, function(data, status) {
+            location.reload()
+        })
+    }
+</script>
 @stop

@@ -35,9 +35,7 @@ Management's Employee
                             <td><a href="{{ route('editEmployee') }}?id={{ $item->id }}">
                             <button class="btn btn-warning">Edit</button></a></td>
                             <td>
-							<a href="{{ route('deleteEmployee') }}?id={{ $item->id }}">
-                            <button class="btn btn-danger">delete</button></a>
-							<!-- <button class="btn btn-danger" onclick="deleteProduct({{ $item->id }})">Delete</button> -->
+							<button class="btn btn-danger" onclick="deleteEmployee({{ $item->id }})">Delete</button>
                             </td>
 						</tr>
 						
@@ -47,4 +45,17 @@ Management's Employee
 			</div>
 		</div>
 	</div>
+@stop
+
+@section('js')
+<script type="text/javascript">
+    function deleteEmployee(id) {
+        $.post('{{ route('deleteEmployee') }}', {
+            "_token": "{{ csrf_token() }}",
+            id: id
+        }, function(data, status) {
+            location.reload()
+        })
+    }
+</script>
 @stop

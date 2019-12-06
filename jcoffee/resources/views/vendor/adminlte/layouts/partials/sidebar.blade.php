@@ -42,17 +42,38 @@
                 </ul>
             </li>
             <li class="treeview">
-                <a href="#"><i class='fa fa-reorder'></i> <span>{{ trans('adminlte_lang::message.order') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-th-large'></i> <span>{{ trans('adminlte_lang::message.order') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('order/inputOrder') }}"><i class='fa fa-plus-square-o'></i><span>{{ trans('adminlte_lang::message.addorder') }}</span></a></li>
                     <li><a href="{{ url('order/showOrder') }}"><i class='fa fa-list'></i><span>{{ trans('adminlte_lang::message.orderlist') }}</span></a></li>
                 </ul>
             </li>
             <li class="treeview">
-                <a href="#"><i class='fa fa-reorder'></i> <span>{{ trans('adminlte_lang::message.orderDetail') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-th-large'></i> <span>{{ trans('adminlte_lang::message.orderDetail') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('order_detail/postProduct') }}"><i class='fa fa-plus-square-o'></i><span>{{ trans('adminlte_lang::message.addOrderDetail') }}</span></a></li>
                     <li><a href="{{ url('order_detail/showOrder') }}"><i class='fa fa-list'></i><span>{{ trans('adminlte_lang::message.orderDetailList') }}</span></a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-th-large'></i> <span>{{ trans('adminlte_lang::message.material') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('material/input') }}"><i class='fa fa-plus-square-o'></i><span>{{ trans('adminlte_lang::message.addmaterial') }}</span></a></li>
+                    <li><a href="{{ url('material/showMaterial') }}"><i class='fa fa-list'></i><span>{{ trans('adminlte_lang::message.materiallist') }}</span></a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-th-large'></i> <span>{{ trans('adminlte_lang::message.category') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('category/inputc') }}"><i class='fa fa-plus-square-o'></i><span>{{ trans('adminlte_lang::message.addcategory') }}</span></a></li>
+                    <li><a href="{{ url('category/showCategory') }}"><i class='fa fa-list'></i><span>{{ trans('adminlte_lang::message.categorylist') }}</span></a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-th-large'></i> <span>{{ trans('adminlte_lang::message.employee') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('employee/inputEmployee') }}"><i class='fa fa-plus-square-o'></i><span>{{ trans('adminlte_lang::message.addemployee') }}</span></a></li>
+                    <li><a href="{{ url('employee/showEmployee') }}"><i class='fa fa-list'></i><span>{{ trans('adminlte_lang::message.employeelist') }}</span></a></li>
                 </ul>
             </li>
 

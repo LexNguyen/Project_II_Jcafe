@@ -7,6 +7,6 @@ Route::group(['prefix' => '/material'],function() {
 
     Route::get('/showMaterial','MaterialController@showMaterial')->name('showMaterial');
 
-    Route::get('/delete','MaterialController@deleteMaterial')->name('deleteMaterial');
+    Route::post('/delete','MaterialController@deleteMaterial')->name('deleteMaterial');
 	
 });

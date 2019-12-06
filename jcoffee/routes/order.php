@@ -7,6 +7,6 @@ Route::group(['prefix' => '/order'],function() {
 
     Route::get('/showOrder','OrderController@showOrder')->name('showOrder');
 
-    Route::get('/delete','OrderController@deleteOrder')->name('deleteOrder');
+    Route::post('/delete','OrderController@deleteOrder')->name('deleteOrder');
 	
 });

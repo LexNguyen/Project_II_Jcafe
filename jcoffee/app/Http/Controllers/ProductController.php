@@ -79,6 +79,5 @@ class ProductController extends Controller
 		DB::table('products')
 		->where('id', $request->id)
 		->delete();
-		return redirect()->route('showP');
 	}
 }

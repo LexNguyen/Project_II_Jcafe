@@ -43,7 +43,6 @@ class CategoryController extends Controller
 		DB::table('category')
 		->where('id', $request->id)
 		->delete();
-		return redirect()->route('showCategory');
 	}
 
 }

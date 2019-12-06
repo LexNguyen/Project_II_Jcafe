@@ -18,7 +18,7 @@ class CreateMaterialTable extends Migration
             $table->string('name');
             $table->datetime('import_date');
             $table->integer('number');
-            $table->integer('price');
+            $table->float('price');
             $table->timestamps();
         });
     }
