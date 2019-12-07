@@ -54,7 +54,7 @@
             </div>
             <div class="navbar-collapse collapse !important">
                 <ul class="nav navbar-nav !important">
-                    <li class="active"><a href="#home" class="smoothScroll">{{ trans('adminlte_lang::message.home') }}</a></li>
+                    <li class="active"><a href="{{ url('/') }}" class="smoothScroll">{{ trans('adminlte_lang::message.home') }}</a></li>
                     <li><a href="{{ url('products/showProduct') }}" class="smoothScroll">{{ trans('Product') }}</a></li>
                     <li><a href="{{ url('/description') }}" class="smoothScroll">{{ trans('About Us') }}</a></li>
                     <li><a href="{{ url('/contactUs') }}" class="smoothScroll">{{ trans('adminlte_lang::message.contact') }}</a></li>
@@ -101,5 +101,62 @@
                 </div>
             </div>
             </div>
+            <footer>
+		 <div class="row footer" style="background-color: black;font-weight: bolder;color: red">
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div>
+              <a class="f-title">PRODUCTS</a>
+            </div>
+            <ul>
+              <li><a href="bulbs.html">Cafe G7</a></li>
+              <li><a href="spotlight.html">Cafe Đen</a></li>
+              <li><a href="decoration.html">Cafe Sữa</a></li>
+              <li><a href="smart.html">Cafe Phin</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div>
+              <a class="f-title">SERVICES</a>
+            </div>
+            <ul>
+              <li><a href="#">Trung Nguyen</a></li>
+              <li><a href="#">Cafe Biz</a></li>
+              <li><a href="#">Warranty</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div>
+              <a class="f-title">CONTACT</a>
+            </div>
+            <ul>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Terms &amp; Conditions</a></li>
+              <li><a href="#">Recruitment</a></li>
+              <li><a href="#">Agent authorisation</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div>
+              <a class="f-title">INFO</a>
+            </div>
+            <ul>
+              <li><a href="#"><img src="{{ asset('/img/hotline.png') }}" alt=""> 19001900</a></li>
+              <li><a>No 1. Duong Dinh Nghe, Ha Noi, Viet Nam</a></li>
+              <li>
+                <a href="#"><img src="{{ asset('/img/FB.png') }}" alt=""></a>
+                <a href="#"><img src="{{ asset('/img/UT.png') }}" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row footer" style="background-color: black">
+            <div class="col-md-12 col-xs-12">
+                <p class="copyright" style="color: #f0f0f0">© Copyright 2019 LED All rights Reserved</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

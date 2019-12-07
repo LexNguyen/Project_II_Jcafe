@@ -5,7 +5,7 @@
 @stop
 
 @section('contentheader_title')
-	Danh Sách San Pham
+	Product List
 @stop
 
 @section('main-content')

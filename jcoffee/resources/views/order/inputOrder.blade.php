@@ -1,11 +1,11 @@
 @extends('adminlte::layouts.app')
 
 @section('htmlheader_title')
-	Them Don Hang
+	order
 @stop
 
 @section('contentheader_title')
-	Them Don Hang
+	Order
 @stop
 
 @section('main-content')

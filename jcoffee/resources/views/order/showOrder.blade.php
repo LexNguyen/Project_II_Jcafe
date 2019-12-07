@@ -1,11 +1,11 @@
 @extends('adminlte::layouts.app')
 
 @section('htmlheader_title')
-	Quan Ly Don Hang
+	Order List
 @stop
 
 @section('contentheader_title')
-	Danh Sách Don Hang
+	Order List
 @stop
 
 @section('main-content')

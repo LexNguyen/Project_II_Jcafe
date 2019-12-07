@@ -1,11 +1,11 @@
 @extends('adminlte::layouts.app')
 
 @section('htmlheader_title')
-	Quản Lý Sản Phẩm
+	Add Product
 @stop
 
 @section('contentheader_title')
-Quản Lý Sản Phẩm
+Add Product
 @stop
 
 @section('main-content')

@@ -1,11 +1,11 @@
 @extends('adminlte::layouts.app')
 
 @section('htmlheader_title')
-	Quản Lý Nguyên Liệu
+	Management's Material
 @stop
 
 @section('contentheader_title')
-    Quản Lý Nguyên Liệu
+    Management's Material
 @stop
 
 @section('main-content')
