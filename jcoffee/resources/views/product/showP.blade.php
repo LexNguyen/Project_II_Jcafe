@@ -27,7 +27,7 @@
 							<td>{{ $index++ }}</td>
                             <td>{{ $item->name }}</td>
 							<td>{{ $item->sale }}</td>
-							<td>{{ $item->price }}</td>
+							<td>{{ number_format($item->price) }}VND</td>
                             <td><a href="{{ route('editProducts') }}?id={{ $item->id }}">
                             <button class="btn btn-warning">Edit</button></a></td>
                             <td>
@@ -41,17 +41,16 @@
 			</div>
 		</div>
 	</div>
-@stop
-
-@section('js')
 <script type="text/javascript">
     function deleteProduct(id) {
         $.post('{{ route('deleteProduct') }}', {
             "_token": "{{ csrf_token() }}",
             id: id
         }, function(data, status) {
-            location.reload()
+			console.log(data);
+            location.reload();
         })
     }
 </script>
 @stop
+

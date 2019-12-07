@@ -36,6 +36,10 @@ Quản Lý Sản Phẩm
 						<label>Price</label>
 						<input type="text" name="price" class="form-control" placeholder="Enter price" required>
 					</div>
+					<div class="form-group">
+						<label>Thumbnail</label>
+						<input type="text" name="thumbnail" class="form-control" placeholder="Enter thumbnail" required>
+					</div>
 					<button class="btn btn-success">Add</button>
 				</form>
 			</div>

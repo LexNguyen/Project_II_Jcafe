@@ -16,7 +16,11 @@ Route::get('/', function () {
 });
 
 Route::get('/description', function () {
-    return view('desc');
+    return view('aboutUs');
+});
+
+Route::get('/contactUs', function () {
+    return view('contactUs');
 });
 
 // Route::get('/postProduct', function () {

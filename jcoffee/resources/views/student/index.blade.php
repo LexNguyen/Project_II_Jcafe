@@ -39,7 +39,9 @@
 
 @section('js')
 <script type="text/javascript">
-    function deleteStudent(id) {
+    var deleteStudent;
+$( document ).ready(function() {
+    deleteStudent = function (id) {
         $.post('{{ route('deleteStudent') }}', {
             "_token": "{{ csrf_token() }}",
             id: id
@@ -47,5 +49,13 @@
             location.reload()
         })
     }
+    // function deleteStudent(id) {
+    //     $.post('{{ route('deleteStudent') }}', {
+    //         "_token": "{{ csrf_token() }}",
+    //         id: id
+    //     }, function(data, status) {
+    //         location.reload()
+    //     })
+    // }
 </script>
 @stop

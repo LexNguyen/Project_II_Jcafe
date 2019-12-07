@@ -44,13 +44,14 @@ class ProductController extends Controller
 		$name = $request->name;
 		$sale = $request->sale;
 		$price = $request->price;
-		$price_format = number_format($price);
+		$thumbnail=$request->thumbnail;
 		
 		$data =[
 			'id_cg' => $id_cg,
 			'name' => $name,
 			'sale' => $sale,
-			'price' => $price_format
+			'price' => $price,
+			'thumbnail'=>$thumbnail
 		];
 		if (isset($id) && $id > 0) {
 			DB::table('products')
@@ -76,8 +77,26 @@ class ProductController extends Controller
 	}
 
 	public function deleteProduct(Request $request){
+		$id=$request->$id;
 		DB::table('products')
-		->where('id', $request->id)
+		->where('id',$id)
 		->delete();
+	}
+
+//show Product home
+	public function showProduct(Request $request){
+		$productList = DB::table('products')
+		->leftJoin('order_detail','order_detail.id_p','=','products.id')
+		->select('order_detail.price_detail','name','price','thumbnail')
+		->paginate(8);
+		$index = 1;
+
+		if (isset($request->page)) {
+			$index = ($request->page-1)*8+1;
+		}
+		return view('showProduct')->with([
+			'productList' => $productList,
+			'index' => $index
+		]);
 	}
 }

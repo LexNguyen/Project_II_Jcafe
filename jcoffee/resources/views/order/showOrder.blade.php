@@ -24,7 +24,8 @@
 						<tr>
 							<td>{{ $index++ }}</td>
                             <td>{{ $item->order_date }}</td>
-							<td>{{ $item->total_price }}</td>
+							<td>{{ number_format($item->total_price) }}VND</td>
+							<td>
 							<button class="btn btn-danger" onclick="deleteOrder({{ $item->id }})">Delete</button>
                             </td>
 						</tr>

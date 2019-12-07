@@ -22,7 +22,11 @@ class CreateProductsTable extends Migration
             $table->foreign('id_cg')->references('id')->on('category');
             $table->timestamps();
         });
+        Schema::table('products', function (Blueprint $table) {
+            $table->string('thumbnail');
+        });
     }
+   
 
     /**
      * Reverse the migrations.

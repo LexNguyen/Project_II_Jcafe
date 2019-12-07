@@ -28,7 +28,7 @@
                             <td>{{ $item->name }}</td>
 							<td>{{ $item->import_date }}</td>
                             <td>{{ $item->number }}</td>
-							<td>{{ $item->price }}</td>
+							<td>{{ number_format($item->price) }}</td>
                             <td>
 							<button class="btn btn-danger" onclick="deleteMaterial({{ $item->id }})">Delete</button>
                             </td>

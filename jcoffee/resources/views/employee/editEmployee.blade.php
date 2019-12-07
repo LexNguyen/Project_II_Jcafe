@@ -21,7 +21,7 @@
 					</div>
                     <div class="form-group">
                     <label>Position</label>
-						<select class="form-control"  name="password" value="{{ ($employee != null)?$employee->password:'' }}">
+						<select class="form-control"  name="position" value="{{ ($employee != null)?$employee->position:'' }}">
 								<option>Quan Ly</option>
                                 <option>Nhan Vien</option>	
                         </select>

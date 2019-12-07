@@ -12,5 +12,7 @@ Route::group(['prefix' => '/products'],function() {
     Route::post('/editP','ProductController@addProduct')->name('postEditProducts');
 
     Route::post('/delete','ProductController@deleteProduct')->name('deleteProduct');
+
+    Route::get('/showProduct','ProductController@showProduct')->name('show');
 	
 });

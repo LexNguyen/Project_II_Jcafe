@@ -34,14 +34,14 @@ class EmployeesController extends Controller
 
 	public function addEmployee(Request $request){
 		$id = $request->id;
-		$password = $request->password;
+		$position = $request->position;
 		$name = $request->name;
 		$address = $request->address;
         $phone = $request->phone;
         $age = $request->age;
 		
 		$data =[
-			'password' => $password,
+			'position' => $position,
 			'name' => $name,
 			'address' => $address,
             'phone' => $phone,

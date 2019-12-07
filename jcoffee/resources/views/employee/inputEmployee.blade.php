@@ -16,7 +16,7 @@ Management's Employee
 					{{ csrf_field() }}
                     <div class="form-group">
                     <label>Position</label>
-						<select class="form-control"  name="password">
+						<select class="form-control"  name="position">
 								<option>Quan Ly</option>
                                 <option>Nhan Vien</option>	
                         </select>

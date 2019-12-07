@@ -27,7 +27,7 @@ Management's Employee
 					@foreach ($employeeList as $item)
 						<tr>
 							<td>{{ $index++ }}</td>
-                            <td>{{ $item->password }}</td>
+                            <td>{{ $item->position }}</td>
 							<td>{{ $item->name }}</td>
 							<td>{{ $item->address }}</td>
                             <td>{{ $item->phone }}</td>

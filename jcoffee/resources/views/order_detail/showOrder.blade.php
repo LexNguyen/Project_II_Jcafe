@@ -29,7 +29,7 @@
 							<td>{{ $item->table_number }}</td>
                             <td>{{ $item->number }}</td>
 							<td>{{ $item->name }}</td>
-							<td>{{ $item->price_detail }}</td>
+							<td>{{ number_format($item->price_detail) }}VND</td>
 							<td>{{ $item->customer_request }}</td>
 							<td><a href="{{ route('editO') }}?id={{ $item->id }}">
                             <button class="btn btn-warning">Edit</button></a></td>
