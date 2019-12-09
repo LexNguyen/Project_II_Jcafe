@@ -7,6 +7,6 @@ Route::group(['prefix' => '/category'],function() {
 
     Route::get('/showCategory','CategoryController@showCategory')->name('showCategory');
 
-    Route::post('/delete','CategoryController@deleteCategory')->name('deleteCategory');
+    Route::get('/delete','CategoryController@deleteCategory')->name('deleteCategory');
 	
 });

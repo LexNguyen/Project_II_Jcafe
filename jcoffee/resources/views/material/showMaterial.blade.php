@@ -30,7 +30,8 @@
                             <td>{{ $item->number }}</td>
 							<td>{{ number_format($item->price) }}</td>
                             <td>
-							<button class="btn btn-danger" onclick="deleteMaterial({{ $item->id }})">Delete</button>
+							<a href="{{ route('deleteMaterial') }}?id={{ $item->id }}">
+                            <button class="btn btn-danger">Delete</button></a>
                             </td>
 						</tr>
 						
@@ -42,7 +43,7 @@
 	</div>
 @stop
 
-@section('js')
+<!-- @section('js')
 <script type="text/javascript">
     function deleteMaterial(id) {
         $.post('{{ route('deleteMaterial') }}', {
@@ -53,4 +54,4 @@
         })
     }
 </script>
-@stop
+@stop -->

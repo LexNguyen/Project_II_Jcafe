@@ -35,7 +35,8 @@ Management's Employee
                             <td><a href="{{ route('editEmployee') }}?id={{ $item->id }}">
                             <button class="btn btn-warning">Edit</button></a></td>
                             <td>
-							<button class="btn btn-danger" onclick="deleteEmployee({{ $item->id }})">Delete</button>
+							<a href="{{ route('deleteEmployee') }}?id={{ $item->id }}">
+                            <button class="btn btn-danger">Delete</button></a>
                             </td>
 						</tr>
 						
@@ -47,7 +48,7 @@ Management's Employee
 	</div>
 @stop
 
-@section('js')
+<!-- @section('js')
 <script type="text/javascript">
     function deleteEmployee(id) {
         $.post('{{ route('deleteEmployee') }}', {
@@ -58,4 +59,4 @@ Management's Employee
         })
     }
 </script>
-@stop
+@stop -->

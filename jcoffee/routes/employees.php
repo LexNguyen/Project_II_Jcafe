@@ -9,6 +9,6 @@ Route::group(['prefix' => '/employee'],function() {
 
     Route::get('/edit','EmployeesController@editEmployee')->name('editEmployee');
     
-    Route::post('/delete','EmployeesController@deleteEmployee')->name('deleteEmployee');
+    Route::get('/delete','EmployeesController@deleteEmployee')->name('deleteEmployee');
 	
 });

@@ -74,5 +74,6 @@ class EmployeesController extends Controller
 		DB::table('employees')
 		->where('id', $request->id)
 		->delete();
+		return redirect()->route('showEmployee');
 	}
 }

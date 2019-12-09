@@ -44,6 +44,11 @@
 						<input type="text" name="price" class="form-control"
                         value="{{ ($product != null)?$product->price:'' }}">
 					</div>
+					<div class="form-group">
+						<label>Thumbnail</label>
+						<input type="text" name="thumbnail" class="form-control" 
+						value="{{ ($product != null)?$product->thumbnail:'' }}">
+					</div>
 					<button class="btn btn-success">Edit</button>
 				</form>
 			</div>

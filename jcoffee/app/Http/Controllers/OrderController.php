@@ -55,6 +55,7 @@ class OrderController extends Controller
 		DB::table('order')
 		->where('id', $request->id)
 		->delete();
+		return redirect()->route('showOrder');
 	}
 
 }

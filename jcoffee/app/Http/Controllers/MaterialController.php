@@ -49,5 +49,6 @@ class MaterialController extends Controller
 		DB::table('material')
 		->where('id', $request->id)
 		->delete();
+		return redirect()->route('showMaterial');
 	}
 }

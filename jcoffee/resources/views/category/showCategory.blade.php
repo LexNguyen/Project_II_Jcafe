@@ -24,7 +24,8 @@
 							<td>{{ $index++ }}</td>
                             <td>{{ $item->name }}</td>
 							<td>
-                            <button class="btn btn-danger" onclick="deleteCategory({{ $item->id }})">Delete</button>
+                            <a href="{{ route('deleteCategory') }}?id={{ $item->id }}">
+                            <button class="btn btn-danger">Delete</button></a>
                             </td>
 						</tr>
 					@endforeach
@@ -35,7 +36,7 @@
 	</div>
 @stop
 
-@section('js')
+<!-- @section('js')
 <script type="text/javascript">
     function deleteCategory(id) {
         $.post('{{ route('deleteCategory') }}', {
@@ -46,4 +47,4 @@
         })
     }
 </script>
-@stop
+@stop -->
